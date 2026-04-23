@@ -1,4 +1,3 @@
-import 'package:blinkit_clone/main.dart';
 import 'package:flutter/material.dart';
 
 class SplashScreen extends StatefulWidget{
