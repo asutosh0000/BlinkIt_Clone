@@ -1,15 +1,37 @@
-import 'package:flutter/material.dart';
 
-class SplashScreen extends StatefulWidget{
+import 'package:blinkit_clone/domain/constants/appcolors.dart';
+import 'package:blinkit_clone/repository/screens/login/loginscreen.dart';
+import 'package:blinkit_clone/repository/widgets/uihelper.dart';
+import 'package:flutter/material.dart';
+import 'dart:async';
+class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
 
   @override
   State<StatefulWidget> createState() => _SplashScreeState();
 }
 
-class _SplashScreeState extends State<SplashScreen>{
+class _SplashScreeState extends State<SplashScreen> {
   @override
-  Widget build(BuildContext context ){
-    return Scaffold();
+  void initState(){
+    super.initState();
+    Timer(Duration(seconds: 3),(){
+      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>Loginscreen()));
+    });
+  }
+  
+
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: AppColors.scaffoldbackground,
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [UiHelper.customImage(img: "image 1.png")],
+        ),
+      ),
+    );
   }
 }
