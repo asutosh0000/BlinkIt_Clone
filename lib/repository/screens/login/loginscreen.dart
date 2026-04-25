@@ -1,4 +1,4 @@
-import 'package:blinkit_clone/domain/constants/appcolors.dart';
+// import 'package:blinkit_clone/domain/constants/appcolors.dart';
 import 'package:blinkit_clone/repository/widgets/uihelper.dart';
 import 'package:flutter/material.dart';
 
@@ -73,19 +73,29 @@ class Loginscreen extends StatelessWidget {
                               fontWeight: FontWeight.bold,
                               fontSize: 14,
                             ),
-                            SizedBox(width: 5,),
+                            SizedBox(width: 5),
                             UiHelper.customImage(img: "Login Button.png"),
-
                           ],
                         ),
                       ),
                     ),
-                    SizedBox(height: 8,),
-                    UiHelper.customText(text: "Access your saved addresses from Zomato automatically!", color: Color(0XFF9C9C9C), fontWeight: FontWeight(400), fontSize: 10),
-                    SizedBox(height: 30,),
+                    SizedBox(height: 8),
+                    UiHelper.customText(
+                      text:
+                          "Access your saved addresses from Zomato automatically!",
+                      color: Color(0XFF9C9C9C),
+                      fontWeight: FontWeight(400),
+                      fontSize: 10,
+                    ),
+                    SizedBox(height: 30),
                     SizedBox(
-                      child: UiHelper.customText(text: "or login with phone number", color: Color(0XFF269237), fontWeight: FontWeight(400), fontSize: 14),
-                    )
+                      child: UiHelper.customText(
+                        text: "or login with phone number",
+                        color: Color(0XFF269237),
+                        fontWeight: FontWeight(400),
+                        fontSize: 14,
+                      ),
+                    ),
                   ],
                 ),
               ),
