@@ -12,18 +12,21 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      bottomNavigationBar: BottomNavigationBar(items: [
-        BottomNavigationBarItem(icon: UiHelper.customImage(img: "home logo.png")),
-        BottomNavigationBarItem(icon: UiHelper.customImage(img: "cart_logo.png")),
-      ]),
-      // title: 'Blinkit',
-      // theme: ThemeData(
-      //   colorScheme: .fromSeed(seedColor: Colors.deepPurple),
-      // ),
-      // debugShowCheckedModeBanner: false,
-      // home: SplashScreen(),
+    return MaterialApp(
+      title: 'Blinkit',
+      theme: ThemeData(
+        colorScheme: .fromSeed(seedColor: Colors.deepPurple),
+      ),
+      debugShowCheckedModeBanner: false,
+      home: SplashScreen(),
     );
+    //Scaffold(
+      // bottomNavigationBar: BottomNavigationBar(items: [
+      //   BottomNavigationBarItem(icon: UiHelper.customImage(img: "home logo.png")),
+      //   BottomNavigationBarItem(icon: UiHelper.customImage(img: "cart_logo.png")),
+      // ]),
+      
+    //);
   }
 }
 
