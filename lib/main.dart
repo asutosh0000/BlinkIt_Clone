@@ -1,5 +1,5 @@
 import 'package:blinkit_clone/repository/screens/splash/splashScreen.dart';
-import 'package:blinkit_clone/repository/widgets/uihelper.dart';
+// import 'package:blinkit_clone/repository/widgets/uihelper.dart';
 import 'package:flutter/material.dart';
 
 void main() {
