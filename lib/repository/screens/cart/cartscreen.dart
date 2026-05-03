@@ -1,6 +1,7 @@
 import 'package:blinkit_clone/repository/widgets/uihelper.dart';
 import 'package:flutter/material.dart';
 
+// ignore: must_be_immutable
 class CartScreen extends StatelessWidget {
   CartScreen({super.key});
   TextEditingController searchController = TextEditingController();
