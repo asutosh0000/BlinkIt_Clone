@@ -111,6 +111,7 @@ class CatagoryScreen extends StatelessWidget {
               ),
             ],
           ),
+          
           SizedBox(height: 20),
 
           Row(
@@ -213,6 +214,7 @@ class CatagoryScreen extends StatelessWidget {
               ),
             ],
           ),
+          SizedBox(height: 20,),
 
           Expanded(
             flex: 3,
@@ -263,9 +265,9 @@ class CatagoryScreen extends StatelessWidget {
               ),
             ],
           ),
-
+          SizedBox(height: 20,),
           Expanded(
-            flex: 3,
+            flex: 2,
             child: Padding(
               padding: const EdgeInsets.only(left: 10),
               child: ListView.builder(
