@@ -1,14 +1,25 @@
 import 'package:blinkit_clone/repository/widgets/uihelper.dart';
 import 'package:flutter/material.dart';
 
-class CatagoryScreen extends StatelessWidget{
+class CatagoryScreen extends StatelessWidget {
   CatagoryScreen({super.key});
   TextEditingController searchController = TextEditingController();
+  var groceryKitchen = [
+    {
+      "img":"image 41.png",
+      "text": "Vegetables &\nFruits"
+    },
+    {
+      "img": ""
+    }
+  ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Stack(
+      body: Column(
+        children: [
+          Stack(
             children: [
               Container(
                 height: 190,
@@ -78,6 +89,17 @@ class CatagoryScreen extends StatelessWidget{
               ),
             ],
           ),
+          SizedBox(height: 20,),
+
+          Row(
+            children: [
+              SizedBox(width: 10,),
+              UiHelper.customText(text: "Grocery & Kitchen", color: Colors.black, fontWeight: FontWeight.bold, fontSize: 14),
+
+            ],
+          ),
+        ],
+      ),
     );
   }
 }
