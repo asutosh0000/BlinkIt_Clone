@@ -1,7 +1,6 @@
 import 'package:blinkit_clone/repository/widgets/uihelper.dart';
 import 'package:flutter/material.dart';
 
-// ignore: must_be_immutable
 class CatagoryScreen extends StatelessWidget {
   CatagoryScreen({super.key});
   TextEditingController searchController = TextEditingController();
@@ -11,6 +10,30 @@ class CatagoryScreen extends StatelessWidget {
     {"img": "image 43.png", "text": "Oil, Ghee &\nMasala"},
     {"img": "image 44.png", "text": "Dairy, Bread &\nMilk"},
     {"img": "image 45.png", "text": "Biscuits &\nBakery"},
+  ];
+
+  var kitchen = [
+    {"img": "image 21.png", "text": "Dry Fruits &\nCereals"},
+    {"img": "image 22.png", "text": "Kitchen &\nAppliances"},
+    {"img": "image 23.png", "text": "Tea &\nCoffees"},
+    {"img": "image 24.png", "text": "Ice Creams &\nmuch more"},
+    {"img": "image 25.png", "text": "Noodles &\nPacket Food"},
+  ];
+
+  var snacksAndDrinks = [
+    {"img": "image 31.png", "text": "Chips &\nNamkeens"},
+    {"img": "image 32.png", "text": "Sweets &\nChocalates"},
+    {"img": "image 33.png", "text": "Drinks &\nJuices"},
+    {"img": "image 34.png", "text": "Sauces &\nSpreads"},
+    {"img": "image 35.png", "text": "Beauty &\nCosmetics"},
+  ];
+
+  var houseHold = [
+    {"img": "image 36.png", "text": "Chips &\nNamkeens"},
+    {"img": "image 37.png", "text": "Sweets &\nChocalates"},
+    {"img": "image 38.png", "text": "Drinks &\nJuices"},
+    {"img": "image 39.png", "text": "Sauces &\nSpreads"},
+    {"img": "image 40.png", "text": "Beauty &\nCosmetics"},
   ];
 
   @override
@@ -104,21 +127,167 @@ class CatagoryScreen extends StatelessWidget {
 
           SizedBox(height: 20),
           Expanded(
-            child: ListView.builder(
-              itemBuilder: (context, index) {
-                return Container(
-                  height: 78,
-                  width: 71,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10),
-                    color: Color(0XFFD9EBEB),
-                  ),
-                  child: UiHelper.customImage(
-                    img: groceryKitchen[index]["image"].toString(),
-                  ),
-                );
-              },
-              itemCount: groceryKitchen.length,
+            flex: 3,
+            child: Padding(
+              padding: const EdgeInsets.only(left: 10),
+              child: ListView.builder(
+                itemBuilder: (context, index) {
+                  return Column(
+                    children: [
+                      Padding(
+                        padding: EdgeInsets.only(left: 4),
+                        child: Container(
+                          height: 78,
+                          width: 71,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10),
+                            color: Color(0XFFD9EBEB),
+                          ),
+                          child: UiHelper.customImage(
+                            img: groceryKitchen[index]["img"].toString(),
+                          ),
+                        ),
+                      ),
+
+                      UiHelper.customText(
+                        text: groceryKitchen[index]["text"].toString(),
+                        color: Color(0XFF000000),
+                        fontWeight: FontWeight(400),
+                        fontSize: 10,
+                      ),
+                    ],
+                  );
+                },
+                itemCount: groceryKitchen.length,
+                scrollDirection: Axis.horizontal,
+              ),
+            ),
+          ),
+
+          Expanded(
+            flex: 3,
+            child: Padding(
+              padding: const EdgeInsets.only(left: 10),
+              child: ListView.builder(
+                itemBuilder: (context, index) {
+                  return Column(
+                    children: [
+                      Padding(
+                        padding: EdgeInsets.only(left: 4),
+                        child: Container(
+                          height: 78,
+                          width: 71,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10),
+                            color: Color(0XFFD9EBEB),
+                          ),
+                          child: UiHelper.customImage(
+                            img: kitchen[index]["img"].toString(),
+                          ),
+                        ),
+                      ),
+
+                      UiHelper.customText(
+                        text: kitchen[index]["text"].toString(),
+                        color: Color(0XFF000000),
+                        fontWeight: FontWeight(400),
+                        fontSize: 10,
+                      ),
+                    ],
+                  );
+                },
+                itemCount: kitchen.length,
+                scrollDirection: Axis.horizontal,
+              ),
+            ),
+          ),
+
+          Row(
+            children: [
+              SizedBox(width: 10),
+              UiHelper.customText(
+                text: "Snacks & Drinks",
+                color: Colors.black,
+                fontWeight: FontWeight.bold,
+                fontSize: 14,
+              ),
+            ],
+          ),
+
+          Expanded(
+            flex: 3,
+            child: Padding(
+              padding: const EdgeInsets.only(left: 10),
+              child: ListView.builder(
+                itemBuilder: (context, index) {
+                  return Column(
+                    children: [
+                      Padding(
+                        padding: EdgeInsets.only(left: 4),
+                        child: Container(
+                          height: 78,
+                          width: 71,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10),
+                            color: Color(0XFFD9EBEB),
+                          ),
+                          child: UiHelper.customImage(
+                            img: snacksAndDrinks[index]["img"].toString(),
+                          ),
+                        ),
+                      ),
+
+                      UiHelper.customText(
+                        text: snacksAndDrinks[index]["text"].toString(),
+                        color: Color(0XFF000000),
+                        fontWeight: FontWeight(400),
+                        fontSize: 10,
+                      ),
+                    ],
+                  );
+                },
+                itemCount: snacksAndDrinks.length,
+                scrollDirection: Axis.horizontal,
+              ),
+            ),
+          ),
+
+          Row(
+            children: [
+              SizedBox(width: 10),
+              UiHelper.customText(
+                text: "Snacks & Drinks",
+                color: Colors.black,
+                fontWeight: FontWeight.bold,
+                fontSize: 14,
+              ),
+            ],
+          ),
+
+          Expanded(
+            flex: 3,
+            child: Padding(
+              padding: const EdgeInsets.only(left: 10),
+              child: ListView.builder(
+                itemBuilder: (context, index) {
+                  return Padding(
+                    padding: EdgeInsets.only(left: 4),
+                    child: Container(
+                      height: 78,
+                      width: 71,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        color: Color(0XFFD9EBEB),
+                      ),
+                      child: UiHelper.customImage(
+                        img: houseHold[index]["img"].toString(),
+                      ),
+                    ),
+                  );
+                },
+                itemCount: houseHold.length,
+                scrollDirection: Axis.horizontal,
+              ),
             ),
           ),
         ],
