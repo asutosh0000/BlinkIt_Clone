@@ -57,13 +57,9 @@ class CartScreen extends StatelessWidget {
                           fontWeight: FontWeight.bold,
                           fontSize: 12,
                         ),
-                        
                       ],
                     ),
-                    
-                    
                   ],
-                  
                 ),
               ),
               Positioned(
@@ -74,24 +70,62 @@ class CartScreen extends StatelessWidget {
 
                   backgroundColor: Colors.white,
                   // backgroundImage: AssetImage("assets/images/user 1.png"),
-                  child: Icon(
-                    Icons.person,
-                    color: Colors.black,
-                    size: 20,
-                  ),
+                  child: Icon(Icons.person, color: Colors.black, size: 20),
                 ),
               ),
               Positioned(
                 bottom: 20,
                 left: 20,
-                child: UiHelper.CustomTextField(controller: SearchController())
-                )
+                child: UiHelper.CustomTextField(controller: SearchController()),
+              ),
+            ],
+          ),
+          SizedBox(height: 20),
+          UiHelper.customImage(img: "shopping-cart large.png"),
+          UiHelper.customText(
+            text: "Reordering will be easy",
+            color: Color(0XFF000000),
+            fontWeight: FontWeight(700),
+            fontSize: 16,
+          ),
+          UiHelper.customText(
+            text: "Items you order will show up here so you can buy ",
+            color: Color(0XFF000000),
+            fontWeight: FontWeight(500),
+            fontSize: 12,
+          ),
+          UiHelper.customText(
+            text: "them again easily",
+            color: Color(0XFF000000),
+            fontWeight: FontWeight(500),
+            fontSize: 12,
+          ),
+          
+          SizedBox(height: 30,),
+          Row(
+            children: [
+              SizedBox(width: 20,),
+              UiHelper.customText(
+                text: "Bestsellers", 
+                color: Color(0XFF000000), 
+                fontWeight: FontWeight.bold, 
+                fontSize: 16
+              ),
             ],
           ),
           SizedBox(height: 20,),
-          UiHelper.customImage(img: "shopping-cart large.png"),
-          UiHelper.customText(text: "Reordering will be easy", color: Color(0XFF000000), fontWeight: FontWeight(700), fontSize: 16),
-          UiHelper.customText(text: "Items you order will show up here so you can buy them again easily.", color: Color(0XFF000000), fontWeight: FontWeight(500), fontSize: 10),
+          Row(
+            children: [
+              SizedBox(width: 20,),
+              Stack(
+                children: [
+                  UiHelper.customImage(img: "milk.png"),                  
+                  Padding(padding: EdgeInsets.only(top: 98)),
+                  UiHelper.CustomButton((){}),
+                ],
+              )
+            ],
+          ),
         ],
       ),
     );

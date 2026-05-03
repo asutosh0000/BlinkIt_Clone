@@ -23,6 +23,8 @@ class UiHelper {
     );
   }
 
+
+
   static CustomTextField({required TextEditingController controller} ){
     return Container(
       height: 40,
@@ -44,6 +46,21 @@ class UiHelper {
           border: InputBorder.none
         ),
       ),
+    );
+  }
+
+
+  static CustomButton(VoidCallback callback){
+    return Container(
+      
+      height: 18,
+      width: 30,
+      decoration: BoxDecoration(
+        color: Colors.white,
+        border: Border.all(),
+        borderRadius: BorderRadius.circular(4)
+      ),
+      child: Center(child: Text("ADD", style: TextStyle(fontSize: 6, color: Color(0XFF27AF34)),),),
     );
   }
 }
