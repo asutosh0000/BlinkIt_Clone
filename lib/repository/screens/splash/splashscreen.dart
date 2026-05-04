@@ -1,6 +1,5 @@
 
 import 'package:blinkit_clone/domain/constants/appcolors.dart';
-import 'package:blinkit_clone/repository/screens/bottomnav/bottomnavscreen.dart';
 import 'package:blinkit_clone/repository/screens/login/loginscreen.dart';
 import 'package:blinkit_clone/repository/widgets/uihelper.dart';
 import 'package:flutter/material.dart';
